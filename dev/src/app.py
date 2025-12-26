@@ -478,15 +478,27 @@ def run_study_1_analysis(df):
         # Clean columns if duplicates or errors
         X_fe = X_fe.loc[:,~X_fe.columns.duplicated()]
         
-        # Ensure numeric and clean
-        X_fe = X_fe.apply(pd.to_numeric, errors='coerce').fillna(0)
+        # Ensure numeric
+        X_fe = X_fe.apply(pd.to_numeric, errors='coerce')
         
-        # Validate Data for OLS
-        # Drop rows with infs or nans in X_fe or y
-        if np.isinf(X_fe).values.any() or X_fe.isna().values.any():
-             X_fe = X_fe.replace([np.inf, -np.inf], 0).fillna(0)
-             
-        model_fem = sm.OLS(y, X_fe).fit()
+        # RIGOROUS CLEANING: Combine X and y to drop bad rows together
+        XY_combined = pd.concat([y, X_fe], axis=1)
+        
+        # Replace Infs with NaN
+        XY_combined.replace([np.inf, -np.inf], np.nan, inplace=True)
+        
+        # Drop any row with NaN
+        XY_combined.dropna(inplace=True)
+        
+        # Separate back
+        if not XY_combined.empty:
+            y_clean = XY_combined.iloc[:, 0]
+            X_clean = XY_combined.iloc[:, 1:]
+            model_fem = sm.OLS(y_clean, X_clean).fit()
+        else:
+            # Fallback if cleaning removed everything (Unlikely)
+            st.error("Data validation failed for Fixed Effect Model (All rows invalid). Using pooled model.")
+            model_fem = model_cem
         
         # Chow Test (F-Test Comparing SSE)
         rss_restricted = model_cem.ssr
