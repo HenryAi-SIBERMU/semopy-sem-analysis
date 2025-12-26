@@ -1549,7 +1549,7 @@ def run_study_2_analysis(df):
                 results['Jalur Hubungan'] = results.apply(lambda x: f"{label_map.get(x['rval'], x['rval'])} -> {label_map.get(x['lval'], x['lval'])}", axis=1)
                 
                 st.session_state['study2_boot_results'] = results
-                st.experimental_rerun() 
+                st.rerun() 
 
             except Exception as e:
                 st.error(f"Gagal melakukan Bootstrapping: {e}")
