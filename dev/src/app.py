@@ -492,8 +492,8 @@ def run_study_1_analysis(df):
         
         # Separate back
         if not XY_combined.empty:
-            y_clean = XY_combined.iloc[:, 0]
-            X_clean = XY_combined.iloc[:, 1:]
+            y_clean = XY_combined.iloc[:, 0].astype(float)
+            X_clean = XY_combined.iloc[:, 1:].astype(float)
             model_fem = sm.OLS(y_clean, X_clean).fit()
         else:
             # Fallback if cleaning removed everything (Unlikely)
