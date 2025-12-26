@@ -478,9 +478,14 @@ def run_study_1_analysis(df):
         # Clean columns if duplicates or errors
         X_fe = X_fe.loc[:,~X_fe.columns.duplicated()]
         
-        # Ensure numeric
+        # Ensure numeric and clean
         X_fe = X_fe.apply(pd.to_numeric, errors='coerce').fillna(0)
         
+        # Validate Data for OLS
+        # Drop rows with infs or nans in X_fe or y
+        if np.isinf(X_fe).values.any() or X_fe.isna().values.any():
+             X_fe = X_fe.replace([np.inf, -np.inf], 0).fillna(0)
+             
         model_fem = sm.OLS(y, X_fe).fit()
         
         # Chow Test (F-Test Comparing SSE)
