@@ -1867,6 +1867,7 @@ def run_study_2_analysis(df):
 
 def main():
     st.title("Dashboard Riset: Determinan Kinerja Keuangan & Nilai Pasar")
+    # Force deployment update
     st.caption("Platform Analisis Terintegrasi: Sektor Transportasi (MRA-OLS) vs Startup Teknologi (SEM-PLS)")
     
     # STUDY SELECTION IN SIDEBAR
