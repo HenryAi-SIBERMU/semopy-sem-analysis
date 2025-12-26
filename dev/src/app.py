@@ -17,7 +17,9 @@ try:
 except:
     pass  # Logo optional
     
-st.sidebar.markdown("<div style='text-align: center; font-size: small; color: #888; margin-top: -5px;'>olah data powered by <a href='https://duniahub.site' style='text-decoration: none; color: #888;'><b>duniahub.site</b></a></div>", unsafe_allow_html=True)
+APP_VERSION = "v0.1.4"
+
+st.sidebar.markdown(f"<div style='text-align: center; font-size: small; color: #888; margin-top: -5px;'>olah data powered by <a href='https://duniahub.site' style='text-decoration: none; color: #888;'><b>duniahub.site</b></a><br>Ver: {APP_VERSION}</div>", unsafe_allow_html=True)
 st.sidebar.info("💡 **Engine Statistik:**\nMenggunakan library **Statsmodels & Semopy** (Python) yang setara dengan **SmartPLS & Eviews**.\n\n📊 **Cakupan Analisis:**\n* **Studi 1:** Regresi Moderasi (MRA) & Data Panel.\n* **Studi 2:** Structural Equation Modeling (SEM-PLS) & Bootstrapping.")
 
 # Force reload every time to catch new CSV generation
