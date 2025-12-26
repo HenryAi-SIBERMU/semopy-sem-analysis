@@ -1,0 +1,50 @@
+--- ANALYZING DATA TRANSPORT.xlsx ---
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Opex to Revenue', 'Total\xa0Operating\xa0Expenses\u200b', 'Total Revenue', 'Efisiensi Operasional', 'R&D Expense ', 'ROA', 'net income', 'total aset']
+First 5 rows:
+  Unnamed: 0 Unnamed: 1  Unnamed: 2 Opex to Revenue  Total Operating Expenses​  Total Revenue  Efisiensi Operasional  R&D Expense        ROA    net income    total aset
+0          1       AXIO        2024        0.048173               5.941357e+10   1.233328e+12               0.039081  4.820000e+10  0.055962  5.826260e+10  1.041116e+12
+1          2       AXIO        2023        0.034649               4.408071e+10   1.272200e+12               0.035136  4.470000e+10  0.135186  1.270429e+11  9.397612e+11
+2          3       AXIO        2022        0.034668               5.170846e+10   1.491553e+12               0.027019  4.030000e+10  0.082450  8.993255e+10  1.090753e+12
+3          4       AXIO        2021        0.025406               3.694368e+10   1.454146e+12               0.025376  3.690000e+10  0.193908  1.351348e+11  6.969014e+11
+4          5       BUKA        2024        0.073636               3.284355e+11   4.460266e+12               0.069615  3.105000e+11 -0.062451 -1.548463e+09  2.479504e+10
+Missing values per column:
+Unnamed: 0                   0
+Unnamed: 1                   1
+Unnamed: 2                   0
+Opex to Revenue              0
+Total Operating Expenses​    1
+Total Revenue                1
+Efisiensi Operasional        1
+R&D Expense                  1
+ROA                          1
+net income                   1
+total aset                   1
+
+--- ANALYZING DATA STARTUP.xlsx ---
+Columns: ['Unnamed: 0', 'Perusahaan Startup yang Sudah Go-Public', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14', 'Unnamed: 15', 'Unnamed: 16']
+First 5 rows:
+  Unnamed: 0                  Perusahaan Startup yang Sudah Go-Public  Unnamed: 2             Unnamed: 3     Unnamed: 4      Unnamed: 5 Unnamed: 6 Unnamed: 7         Unnamed: 8                                                                                   Unnamed: 9                                                                                          Unnamed: 10                                                                                      Unnamed: 11  Unnamed: 12  Unnamed: 13 Unnamed: 14 Unnamed: 15 Unnamed: 16
+0        NaN                                                      NaN         NaN                    NaN            NaN             NaN        NaN        NaN                NaN                                                                                          NaN                                                                                                  NaN                                                                                              NaN          NaN          NaN         NaN         NaN         NaN
+1        NaN                                                      NaN         NaN  Efisiensi Operasional   R&D Expense    Total Revenue   Tobins Q      harga  share outstanding  Market Value of Equity (Nilai Pasar Ekuitas) = Harga saham penutupan × Jumlah saham beredar  Book Value of Debt (Nilai Buku Utang) = Total kewajiban perusahaan (jangka pendek + jangka panjang)  Book Value of Total Assets (Nilai Buku Aset Total) = Total aset dalam neraca pada akhir periode          NaN          NaN         NaN         NaN         NaN
+2       BELI  PT Global Digital Niaga Tbk (kode: BELI) – brand Blibli      2024.0               0.225096  3762605000000  16715576000000   4.039916        450       131000399381                                                                               58950179721450                                                                                        6348380000000                                                                                   16163344000000          NaN          NaN         NaN         NaN         NaN
+3       BELI  PT Global Digital Niaga Tbk (kode: BELI) – brand Blibli      2023.0               0.254086  3739611000000  14717896000000    4.92242        482       120766180771                                                                               58209299131622                                                                                        4999164000000                                                                                   12840932000000          NaN          NaN         NaN         NaN         NaN
+4       BELI  PT Global Digital Niaga Tbk (kode: BELI) – brand Blibli      2022.0               0.231758  3538729000000  15269078000000   4.211671        470       118493291840                                                                               55691847164800                                                                                        3594978000000                                                                                   14076794000000          NaN          NaN         NaN         NaN         NaN
+Missing values per column:
+Unnamed: 0                                  2
+Perusahaan Startup yang Sudah Go-Public    24
+Unnamed: 2                                  2
+Unnamed: 3                                  1
+Unnamed: 4                                  1
+Unnamed: 5                                  1
+Unnamed: 6                                  1
+Unnamed: 7                                  1
+Unnamed: 8                                  1
+Unnamed: 9                                  1
+Unnamed: 10                                 1
+Unnamed: 11                                 1
+Unnamed: 12                                37
+Unnamed: 13                                37
+Unnamed: 14                                31
+Unnamed: 15                                31
+Unnamed: 16                                31
+

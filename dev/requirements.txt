@@ -1,0 +1,10 @@
+pandas
+plotly
+streamlit
+openpyxl
+statsmodels
+numpy
+semopy
+graphviz
+linearmodels
+scipy
