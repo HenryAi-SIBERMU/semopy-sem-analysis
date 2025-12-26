@@ -1,9 +1,13 @@
-streamlit
 pandas
-numpy
 plotly
-scipy
+streamlit
+openpyxl
 statsmodels
+numpy
 semopy
 graphviz
+linearmodels
+scipy
+seaborn
+matplotlib
 Pillow
