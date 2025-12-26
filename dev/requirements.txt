@@ -8,3 +8,5 @@ semopy
 graphviz
 linearmodels
 scipy
+seaborn
+matplotlib
